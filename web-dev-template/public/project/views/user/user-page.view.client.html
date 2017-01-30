@@ -1,0 +1,35 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <span class="navbar-brand">
+                Edit User Data
+            </span>
+            <a href="#/intro" class="glyphicon glyphicon-chevron-left pull-right" id="checkmark">
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <textarea ng-model="model.user.username" class="form-control text-center" rows="1" placeholder="Name"></textarea>
+    <textarea ng-model="model.user.firstName" class="form-control text-center" rows="1" placeholder="First Name"></textarea>
+    <textarea ng-model="model.user.lastName" class="form-control text-center" rows="1" placeholder="Last Name"></textarea>
+    <textarea ng-model="model.user.emailAddress" class="form-control text-center" rows="1" placeholder="Email Address"></textarea>
+    <textarea readonly ng-model="model.user._id" class="form-control text-center" rows="1" placeholder="User ID"></textarea>
+<br>
+    <a ng-click="model.updateUser(model.user)"
+       class="btn btn-success btn-block">Update Information</a>
+    <a ng-click="model.deleteUser(model.user)"
+       class="btn btn-danger btn-block">Unregister</a>
+    </a>
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <div class="navbar-footer">
+            <div class="navbar-text pull-right">
+                <a href="#/intro" class="glyphicon glyphicon-home"></a>
+            </div>
+        </div>
+    </div>
+</nav>

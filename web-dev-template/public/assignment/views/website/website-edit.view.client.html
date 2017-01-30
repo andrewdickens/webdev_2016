@@ -1,0 +1,60 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="#/user/{{model.userId}}/website" class="glyphicon glyphicon-chevron-left pull-left"
+               id="plus-glyphicon"></a>
+<span class="navbar-brand">
+Edit Website
+</span>
+            <!--<a href="#/feature/{{model.feature._id}}/website" class="glyphicon glyphicon-ok pull-right" id="checkmark"></a>-->
+        </div>
+    </div>
+</nav>
+
+<div class="row container-fluid">
+    <div class="col-sm-4 hidden-xs"
+         style="margin-left:15px; margin-top: 50px; padding-top: 15px; margin-bottom: 50px; position: absolute;top: 0px;bottom: 0px;overflow: auto;">
+        <ul class="list-group">
+            <li ng-repeat="website in model.website" class="list-group-item">
+                <a href="#/user/{{model.user._id}}/website/{{website._id}}/page">
+                    {{website.name}}
+                </a>
+                <a ng-click="model.updateFields(website.name)" class="pull-right"
+                   style="margin-left: 15px;">
+                    <span class="glyphicon glyphicon-cog"></span>
+                </a>
+                <!--<a href="#" class="pull-right">-->
+                <!--<span class="glyphicon glyphicon-play"></span>-->
+                <!--</a>-->
+            </li>
+        </ul>
+    </div>
+
+    <div class="col-sm-8 col-xs-12 pull-right" style="padding-left: 30px;margin-top: 50px; padding-right: 0px;">
+
+        <div class="form-group">
+            <label for="website-new-name">Name</label>
+        <textarea ng-model="model.name" class="form-control" id="website-new-name" rows="1"
+                  placeholder="Name"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="website-new-description">Description</label>
+            <textarea ng-model="model.description" class="form-control" id="website-new-description" rows="3"
+                      placeholder="Description"></textarea>
+        </div>
+
+        <a ng-click="model.updateWebsite()" class="btn btn-success  btn-block">Update</a>
+        <a ng-click="model.removeWebsite()" class="btn btn-danger  btn-block">Delete</a>
+
+    </div>
+
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container-fluid">
+            <div class="navbar-footer">
+                <div class="navbar-text pull-right">
+                    <a href="#/user/{{model.user._id}}" class="glyphicon glyphicon-user"></a>
+                </div>
+            </div>
+        </div><!---->
+    </nav>

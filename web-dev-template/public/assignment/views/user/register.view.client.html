@@ -1,0 +1,46 @@
+<!--<div class="container">-->
+    <!--<h1>Register</h1>-->
+    <!--<input ng-model="username" type="text"-->
+           <!--class="form-control"-->
+           <!--placeholder="username"-->
+           <!--id="username"/>-->
+    <!--<input ng-model="password" type="password"-->
+           <!--class="form-control"-->
+           <!--placeholder="password"-->
+           <!--id="password"/>-->
+    <!--<input ng-model="verifiedPassword" type="password"-->
+           <!--class="form-control"-->
+           <!--placeholder="verify password"-->
+           <!--id="verifiedPassword"/>-->
+    <!--<input ng-model="firstName" type="text"-->
+           <!--class="form-control"-->
+           <!--placeholder="Alice"-->
+           <!--id="firstName"/>-->
+    <!--<input ng-model="lastName" type="text"-->
+           <!--class="form-control"-->
+           <!--placeholder="Wonderland"-->
+           <!--id="lastName"/>-->
+    <!--<a ng-click="model.registerUser(username, password, verifiedPassword, firstName, lastName)"-->
+       <!--class="btn btn-primary btn-block">Register</a>-->
+    <!--<a class="btn btn-danger  btn-block"-->
+       <!--href="#/login">Cancel</a>-->
+<!--</div>-->
+
+<div class="container">
+    <h1>Register</h1>
+    <input type="text"
+           ng-model="username"
+           class="form-control"
+           placeholder="username"/>
+    <input type="password"
+           ng-model="password"
+           class="form-control"
+           placeholder="password"/>
+    <input type="password"
+           class="form-control"
+           placeholder="very password"/>
+    <a class="btn btn-primary btn-block"
+       ng-click="model.register(username, password)">Register</a>
+    <a class="btn btn-danger  btn-block"
+       href="#/login">Cancel</a>
+</div>

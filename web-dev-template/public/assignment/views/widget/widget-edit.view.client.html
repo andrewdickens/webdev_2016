@@ -1,0 +1,64 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="#/user/{{model.uid}}/website/{{model.wid}}/page/{{model.pid}}/widget/new"
+               class="glyphicon glyphicon-chevron-left pull-left" id="plus-glyphicon"></a>
+            <span class="navbar-brand">
+                Edit/Create Widget
+            </span>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+
+    <div ng-switch="model.widgetType">
+        <div ng-switch-when="HEADER">
+            <ng-include src="'views/widget/widget-heading.view.client.html'">
+        </div>
+        <div ng-switch-when="IMAGE">
+            <ng-include src="'views/widget/widget-image.view.client.html'">
+        </div>
+        <div ng-switch-when="YOUTUBE" class="youtube-widget">
+            <ng-include src="'views/widget/widget-youtube.view.client.html'">
+        </div>
+        <div ng-switch-when="TEXT">
+            <!--<div text-angular ng-model="htmlVariable"></div>-->
+            Text
+            <input ng-model="model.text" class="form-control"/>
+            Rows
+            <input ng-model="model.rows" class="form-control" type="number"/>
+            Placeholder
+            <input ng-model="model.placeholder" class="form-control"/>
+            Formatted
+            <input ng-model="model.formatted" type="checkbox"/>
+            <a class="btn btn-success  btn-block"
+               ng-click="model.createWidget()">Create</a>
+            <a class="btn btn-danger  btn-block"
+               ng-click="model.deleteWidget(model.wgid)">Delete</a>
+        </div>
+        <div ng-switch-when="HTML">
+            <div ng-model="model.text"
+                 text-angular
+                 ta-toolbar="[['h1','h2','h3'],['bold','italics','underline','strikeThrough'],
+        ['ul','ol'],['justifyLeft','justifyCenter','justifyRight','justifyFull'],
+        ['indent','outdent'],['html']]">
+            </div>
+            <a class="btn btn-success  btn-block"
+               ng-click="model.createWidget()">Create</a>
+            <a class="btn btn-danger  btn-block"
+               ng-click="model.deleteWidget(model.wgid)">Delete</a>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <div class="navbar-footer">
+            <div class="navbar-text pull-right">
+                <a href="#/user/{{model.uid}}" class="glyphicon glyphicon-user"></a>
+            </div>
+        </div>
+    </div>
+</nav>

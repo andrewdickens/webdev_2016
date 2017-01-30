@@ -1,0 +1,47 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <span class="navbar-brand">
+                Edit Feature Categories
+            </span>
+            <a href="#/admin" class="glyphicon glyphicon-chevron-left pull-right" id="checkmark">
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="col-lg-12">
+        <ul class="list-group">
+            <li class="list-group-item text-center">
+                <textarea ng-model="model.frontEndNew" class="form-control text-center" rows="1" placeholder="Front-end name"></textarea>
+                <textarea ng-model="model.backEndNew" class="form-control text-center" rows="1" placeholder="Back-end name"></textarea>
+                <br>
+                <a ng-click="model.createFeature()"
+                   class="btn btn-success btn-block">Create new Feature Category</a>
+            </li>
+            <li ng-click="" ng-repeat="feature in model.features" class="list-group-item text-center">
+                <textarea ng-model="this.feature.uppercaseName" class="form-control text-center" id="intro-edit2" rows="1" placeholder="Name"></textarea>
+                <textarea ng-model="this.feature.lowercaseName" class="form-control text-center" id="intro-edit" rows="1" placeholder="Name"></textarea>
+                <br>
+                <a ng-click="model.editFeature(this.feature)"
+                   class="btn btn-primary btn-block">Edit {{feature.uppercaseName}}</a>
+                <a ng-click="model.deleteFeature(this.feature)"
+                   class="btn btn-danger btn-block">Delete {{feature.uppercaseName}}</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <div class="navbar-footer">
+            <div class="navbar-text pull-right">
+                <a href="#/intro" class="glyphicon glyphicon-home"></a>
+            </div>
+            <div class="navbar-text left">
+                <a href="#/user/useredit" class="glyphicon glyphicon-user"></a>
+            </div>
+        </div>
+    </div>
+</nav>

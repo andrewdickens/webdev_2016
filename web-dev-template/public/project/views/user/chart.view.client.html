@@ -1,0 +1,98 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <span class="navbar-brand">
+                Data Visualization
+            </span>
+            <a href="#/intro" class="glyphicon glyphicon-chevron-left pull-right" id="checkmark">
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <br><br>
+
+        <div class="col-lg-6">
+
+            <div class="form group">
+                <label>Choose Feature Category</label>
+                <select ng-model="model.featureCategory" ng-change="model.update()" class="form-control-edit" id="featureList">
+                    <OPTION value=" ">Select Feature Type</OPTION>
+                    <OPTION ng-repeat="feature in model.featureNames" value={{feature.lowercaseName}}>{{feature.uppercaseName}}</OPTION>
+                </select> <-- Start here
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="form-group">
+                <label>Choose features to display on chart</label>
+                <form>
+                    <select ng-model="model.featureOptions" class="form-control" multiple="" id="featureValues"
+                            name="featureCompare">
+                        <OPTION ng-repeat="value in model.values" value="{{value.feature}}">{{value.feature}}</OPTION>
+                    </select>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="form-group">
+                <label>Choose databases to compare</label>
+                <form>
+                    <select ng-model="model.database" class="form-control" multiple="" id="database"
+                            name="databaseCompare">
+                        <OPTION ng-repeat="name in model.databaseNames" value="{{name.lowercaseName}}">{{name.uppercaseName}}</OPTION>
+                    </select>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+
+            <div class="form group">
+                <label>Choose Chart Type</label>
+                <select ng-model="model.chartType" ng-change="model.plot()" class="form-control-edit">
+                    <OPTION value="line">Radar</OPTION>
+                    <!--<OPTION value="bar">Bar</OPTION>-->
+                    <!--<OPTION value="pie">Pie</OPTION>-->
+                    <OPTION value="heatmap">Heat Map</OPTION>
+                </select>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div ng-show="model.chart" class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-bar-chart-o fa-fw"> </i>
+                    <div class="pull-right">
+                        <p id="chart-feature-identifier"></p>
+                    </div>
+                </div>
+
+                <div class="panel-body" id="container"></div>
+            </div>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <div class="navbar-footer">
+            <div class="navbar-text pull-right">
+                <a href="#/intro" class="glyphicon glyphicon-home"></a>
+            </div>
+            <div class="navbar-text left">
+                <a href="#/user/useredit" class="glyphicon glyphicon-user"></a>
+            </div>
+        </div>
+    </div>
+</nav>

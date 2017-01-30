@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="WebAppMaker">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>Login</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <link href="css/jquery-ui.css" rel="stylesheet"/>
+    <link href="css/textAngular.css" rel="stylesheet"/>
+    <link href="css/youtubeStyle.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+
+
+    <!--cdn-->
+    <script src="js/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.0/angular-route.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/textAngular-rangy.min.js"></script>
+    <script src="js/textAngular.min.js"></script>
+    <script src="js/textAngular-sanitize.min.js"></script>
+
+    <!--misc-->
+    <script src="app.js"></script>
+    <script src="config.js"></script>
+
+    <!--<script src="/assignment/app.js"></script>-->
+
+    <!--controllers-->
+    <script src="controllers/user/login.controller.client.js"></script>
+    <script src="controllers/user/profile.controller.client.js"></script>
+    <script src="controllers/user/register.controller.client.js"></script>
+    <script src="controllers/website/website-list.controller.client.js"></script>
+    <script src="controllers/website/website-new.controller.client.js"></script>
+    <script src="controllers/website/website-edit.controller.client.js"></script>
+    <script src="controllers/widget/widget-list.controller.client.js"></script>
+    <script src="controllers/widget/widget-new.controller.client.js"></script>
+    <script src="controllers/widget/widget-edit.controller.client.js"></script>
+    <script src="controllers/page/page-edit.controller.client.js"></script>
+    <script src="controllers/page/page-new.controller.client.js"></script>
+    <script src="controllers/page/page-list.controller.client.js"></script>
+
+    <!--services-->
+    <script src="services/page.service.client.js"></script>
+    <script src="services/user.service.client.js"></script>
+    <script src="services/website.service.client.js"></script>
+    <script src="services/widget.service.client.js"></script>
+
+    <!--directives-->
+    <!--<script src="../../assignment/directives/jga-directives.js"></script>-->
+    <!--misc-->
+
+    <style>
+        #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+        #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+        #sortable li span { position: absolute; margin-left: -1.3em; }
+    </style>
+
+</head>
+<body>
+<!--<script>-->
+    <!--window.fbAsyncInit = function() {-->
+        <!--FB.init({-->
+            <!--appId      : '1290631784342301',-->
+            <!--xfbml      : true,-->
+            <!--version    : 'v2.6'-->
+        <!--});-->
+    <!--};-->
+
+    <!--(function(d, s, id){-->
+        <!--var js, fjs = d.getElementsByTagName(s)[0];-->
+        <!--if (d.getElementById(id)) {return;}-->
+        <!--js = d.createElement(s); js.id = id;-->
+        <!--js.src = "//connect.facebook.net/en_US/sdk.js";-->
+        <!--fjs.parentNode.insertBefore(js, fjs);-->
+    <!--}(document, 'script', 'facebook-jssdk'));-->
+<!--</script>-->
+<div>
+    <div ng-view>
+    </div>
+</div>
+</body>
+</html>

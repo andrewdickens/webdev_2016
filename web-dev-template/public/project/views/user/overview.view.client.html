@@ -1,0 +1,42 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <span class="navbar-brand">
+                QuaBaseBD Overview
+            </span>
+            <!--<a ng-click="model.updateUser()" class="glyphicon glyphicon-chevron-left pull-right" id="checkmark">-->
+            <!--</a>-->
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <br><br>
+        <p>{{model.intro}}</p>
+        <br>
+        <p>{{model.body}}</p>
+        <br>
+        <p>{{model.conclusion}}</p>
+        <br><br>
+    </div>
+
+    <div class="row">
+        <a ng-click="model.chart()"
+           class="btn btn-primary btn-block">Compare</a>
+        <a ng-click="model.logout()"
+           class="btn btn-danger btn-block">Logout</a>
+        <a ng-show="model.adminShow" ng-click="model.adminConsole()"
+           class="btn btn-success btn-block">Admin Console</a>
+    </div>
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <div class="navbar-footer">
+            <div class="navbar-text left">
+                <a href="#/user/useredit" class="glyphicon glyphicon-user"></a>
+            </div>
+        </div>
+    </div>
+</nav>

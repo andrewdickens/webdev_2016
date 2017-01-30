@@ -1,0 +1,34 @@
+<div class="container">
+
+    <div class="form-group">
+        <label for="widget-image-new-name">Name</label>
+        <textarea ng-model="model.name" class="form-control" id="widget-image-new-name" rows="3" placeholder="Name"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="widget-image-new-text">Text</label>
+        <textarea ng-model="model.description" class="form-control" id="widget-image-new-text" rows="3" placeholder="Description"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="widget-image-new-url">URL</label>
+        <textarea ng-model="model.url" class="form-control" id="widget-image-new-url" rows="3" placeholder="https://www.google.com"></textarea>
+    </div>
+    
+    <div class="form-group">
+        <label for="widget-image-new-width">Width</label>
+        <textarea ng-model="model.width" class="form-control" id="widget-image-new-width" rows="3" placeholder="50%"></textarea>
+    </div>
+
+    <form class="form-group" action="/api/upload"  method="post" enctype="multipart/form-data">
+        <input  name="myFile"   type="file" class="form-control"/>
+        <input  name="width"    value="{{model.width}}" style="display: none"/>
+        <!--<input  name="widgetId" value="{{model.widget._id}}"   style="display: none"/>-->
+        <button type="submit"   class="btn btn-block btn-primary">Upload Image</button>
+        <a class="btn btn-success  btn-block"
+           ng-click="model.createWidget()">Create</a>
+        <a class="btn btn-danger  btn-block"
+           ng-click="model.deleteWidget(model.wgid)">Delete</a>
+    </form>
+
+</div>

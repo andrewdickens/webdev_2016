@@ -1,0 +1,21 @@
+<div class="container">
+
+    <div class="form-group">
+        <label for="widget-image-new-text">Name</label>
+        <textarea ng-model="model.name" class="form-control" id="widget-image-new-text" rows="3" placeholder="Name"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="widget-image-new-description">Description</label>
+        <textarea ng-model="model.description" class="form-control" id="widget-image-new-description" rows="3" placeholder="Description"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="widget-image-new-size">Size</label>
+        <textarea ng-model="model.size" class="form-control" id="widget-image-new-size" rows="3" placeholder="3">3</textarea>
+    </div>
+    <a class="btn btn-success  btn-block"
+       ng-click="model.createWidget()">Create</a>
+    <a class="btn btn-danger  btn-block"
+       ng-click="model.deleteWidget(model.wgid)">Delete</a>
+</div>

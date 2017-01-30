@@ -1,0 +1,62 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <span class="navbar-brand">
+                Edit Content
+            </span>
+            <a href="#/admin" class="glyphicon glyphicon-chevron-left pull-right" id="checkmark">
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <br><br>
+        <p>{{model.overview}}</p>
+        <br><br>
+    </div>
+
+
+
+    <div class="row">
+        <div class="form-group">
+            <label for="intro-edit">Intro</label>
+            <textarea ng-model="model.intro" class="form-control" id="intro-edit" rows="3" placeholder="Intro Text"></textarea>
+        </div>
+        <a ng-show="model.adminShow" ng-click="model.updateContent('intro')"
+           class="btn btn-success btn-block">Update Intro</a>
+    </div>
+    <br>
+    <div class="row">
+        <div class="form-group">
+            <label for="body-edit">Body</label>
+            <textarea ng-model="model.body" class="form-control" id="body-edit" rows="3" placeholder="Body Text"></textarea>
+        </div>
+        <a ng-show="model.adminShow" ng-click="model.updateContent('body')"
+           class="btn btn-success btn-block">Update Body</a>
+    </div>
+    <br>
+    <div class="row">
+        <div class="form-group">
+            <label for="conclusion-edit">Conclusion</label>
+            <textarea ng-model="model.conclusion" class="form-control" id="conclusion-edit" rows="3" placeholder="Conclusion Text"></textarea>
+        </div>
+        <a ng-click="model.updateContent('conclusion')"
+           class="btn btn-success btn-block">Update Conclusion</a>
+    </div>
+
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <div class="navbar-footer">
+            <div class="navbar-text pull-right">
+                <a href="#/intro" class="glyphicon glyphicon-home"></a>
+            </div>
+            <div class="navbar-text left">
+                <a href="#/user/useredit" class="glyphicon glyphicon-user"></a>
+            </div>
+        </div>
+    </div>
+</nav>

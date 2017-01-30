@@ -1,0 +1,62 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <span class="navbar-brand">
+                Edit Feature Options
+            </span>
+            <a href="#/admin" class="glyphicon glyphicon-chevron-left pull-right" id="checkmark">
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row container-fluid">
+        <div class="col-sm-6 col-lg-6 col-xs-6">
+            <p class="text-center">Choose a Feature Category to display Feature Options</p>
+            <ul class="list-group">
+                <li ng-click="" ng-repeat="feature in model.features" class="list-group-item text-center">
+                    <a ng-click="model.getFeatureOptions(feature)"
+                       class="btn btn-primary btn-block">{{feature.uppercaseName}}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-6 col-lg-6 col-xs-6">
+            <ul class="list-group">
+                <li ng-show="model.show" class="list-group-item text-center">
+                    <textarea readonly ng-model="model.categoryValue" class="form-control text-center" rows="1"
+                              placeholder="Back-end Name"></textarea>
+                    <textarea ng-model="model.featureValue" class="form-control text-center" rows="1"
+                              placeholder="Feature description"></textarea>
+                    <br>
+                    <a ng-click="model.createFeatureOption()"
+                       class="btn btn-success btn-block">Add new Feature Option</a>
+                </li>
+                <br>
+                <li ng-repeat="option in model.featureOptions" class="list-group-item text-center">
+                    <textarea ng-model="this.option.feature" class="form-control text-center" id="intro-edit2" rows="1"
+                              placeholder="Name"></textarea>
+                    <br>
+                    <a ng-click="model.updateFeatureOption(option)"
+                       class="btn btn-primary btn-block">Update {{option.category}} : {{option.feature}}</a>
+                    <a ng-click="model.deleteFeatureOption(option)"
+                       class="btn btn-danger btn-block">Delete</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <div class="navbar-footer">
+            <div class="navbar-text pull-right">
+                <a href="#/intro" class="glyphicon glyphicon-home"></a>
+            </div>
+                <div class="navbar-text left">
+                    <a href="#/user/useredit" class="glyphicon glyphicon-user"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,48 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <span class="navbar-brand">
+                Admin Console
+            </span>
+            <a href="#/intro" class="glyphicon glyphicon-chevron-left pull-right" id="checkmark">
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <br><br>
+        <p>{{model.overview}}</p>
+        <br><br>
+    </div>
+
+    <div class="row">
+        <a ng-click="model.content()"
+           class="btn btn-primary btn-block">Edit Content</a>
+        <a ng-click="model.user()"
+           class="btn btn-primary btn-block">Edit Users</a>
+        <a ng-click="model.chartData()"
+           class="btn btn-primary btn-block">Edit Chart Data</a>
+        <a ng-click="model.featureCategories()"
+           class="btn btn-primary btn-block">Edit Feature Categories</a>
+        <a ng-click="model.editFeatures()"
+           class="btn btn-primary btn-block">Edit Features Options</a>
+    </div>
+
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <div class="navbar-footer">
+            <div class="navbar-text pull-right">
+                <a href="#/intro" class="glyphicon glyphicon-home"></a>
+            </div>
+            <div class="navbar-footer">
+                <div class="navbar-text left">
+                    <a href="#/user/useredit" class="glyphicon glyphicon-user"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
